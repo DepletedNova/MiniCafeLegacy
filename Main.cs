@@ -1,11 +1,17 @@
 ﻿global using static MiniCafe.Helper;
 global using static MiniCafe.References;
+global using static KitchenLib.Utils.GDOUtils;
 using KitchenLib;
 using KitchenLib.Customs;
+using KitchenLib.Event;
 using KitchenLib.Utils;
 using KitchenMods;
 using System.Reflection;
 using UnityEngine;
+using KitchenData;
+using MiniCafe.Items;
+using KitchenLib.References;
+using MiniCafeLegacy.Mains.Coffee;
 
 namespace MiniCafeLegacy
 {
@@ -21,6 +27,13 @@ namespace MiniCafeLegacy
         protected override void OnPostActivate(Mod mod)
         {
             AddGameData();
+
+            Events.BuildGameDataEvent += (s, args) =>
+            {
+                UpdateMugs();
+
+                args.gamedata.ProcessesView.Initialise(args.gamedata);
+            };
         }
 
         public static int GetHash(string UniqueNameID) => StringUtils.GetInt32HashCode($"{MiniCafe.Main.GUID}:{UniqueNameID}");
@@ -44,5 +57,23 @@ namespace MiniCafeLegacy
             }
             Log($"Registered {counter} GameDataObjects.");
         }
+
+        #region Update Mini Cafe
+        private void UpdateMugs()
+        {
+            GetCastedGDO<Item, BigMug>().DerivedProcesses.Add(new()
+            {
+                Duration = 3.5f,
+                Process = GetGDO<Process>(ProcessReferences.FillCoffee),
+                Result = GetCastedGDO<Item, BigEspresso>()
+            });
+            GetCastedGDO<Item, SmallMug>().DerivedProcesses.Add(new()
+            {
+                Duration = 2.75f,
+                Process = GetGDO<Process>(ProcessReferences.FillCoffee),
+                Result = GetCastedGDO<Item, SmallEspresso>()
+            });
+        }
+        #endregion
     }
 }

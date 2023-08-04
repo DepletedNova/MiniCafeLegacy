@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DFD840F-D305-4A2D-BE44-66A6A136C21A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiniCafeLegacy</RootNamespace>
+    <AssemblyName>Legacy Cafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>latest</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ApplianceLib-Workshop">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\ApplianceLib\content\ApplianceLib-Workshop.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.Common">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.GameData">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.GameData.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.Layouts">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.Layouts.dll</HintPath>
+    </Reference>
+    <Reference Include="Kitchen.RestaurantMode">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.RestaurantMode.dll</HintPath>
+    </Reference>
+    <Reference Include="KitchenLib-Workshop, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2898069883\KitchenLib-Workshop.dll</HintPath>
+    </Reference>
+    <Reference Include="KitchenMode">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\KitchenMode.dll</HintPath>
+    </Reference>
+    <Reference Include="KitchenMods">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\KitchenMods.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\MessagePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Entities">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Serialization">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coffee\Americano\AmericanoDish.cs" />
+    <Compile Include="Coffee\Americano\BigAmericano.cs" />
+    <Compile Include="Coffee\Americano\PlatedBigAmericano.cs" />
+    <Compile Include="Coffee\Americano\PlatedSmallAmericano.cs" />
+    <Compile Include="Coffee\Americano\SmallAmericano.cs" />
+    <Compile Include="Coffee\Cappuccino\BigCappuccino.cs" />
+    <Compile Include="Coffee\Cappuccino\CappuccinoDish.cs" />
+    <Compile Include="Coffee\Cappuccino\PlatedBigCappuccino.cs" />
+    <Compile Include="Coffee\Cappuccino\PlatedSmallCappuccino.cs" />
+    <Compile Include="Coffee\Cappuccino\SmallCappuccino.cs" />
+    <Compile Include="Coffee\CuplessCoffeeMachine.cs" />
+    <Compile Include="Coffee\CuplessFillCupProcess.cs" />
+    <Compile Include="Coffee\Espresso\BigEspresso.cs" />
+    <Compile Include="Coffee\Espresso\EspressoDish.cs" />
+    <Compile Include="Coffee\Espresso\PlatedBigEspresso.cs" />
+    <Compile Include="Coffee\Espresso\PlatedSmallEspresso.cs" />
+    <Compile Include="Coffee\Espresso\SmallEspresso.cs" />
+    <Compile Include="Coffee\Iced\BigIced.cs" />
+    <Compile Include="Coffee\Iced\IcedDish.cs" />
+    <Compile Include="Coffee\Iced\PlatedBigIced.cs" />
+    <Compile Include="Coffee\Iced\PlatedSmallIced.cs" />
+    <Compile Include="Coffee\Iced\SmallIced.cs" />
+    <Compile Include="Coffee\Mocha\BigMocha.cs" />
+    <Compile Include="Coffee\Mocha\MochaDish.cs" />
+    <Compile Include="Coffee\Mocha\SmallMocha.cs" />
+    <Compile Include="Coffee\SteamedMilk.cs" />
+    <Compile Include="Coffee\SteamerMachine.cs" />
+    <Compile Include="Coffee\SteamProcess.cs" />
+    <Compile Include="Donuts\Basic\BakedDonuts.cs" />
+    <Compile Include="Donuts\Basic\BurntDonuts.cs" />
+    <Compile Include="Donuts\Basic\Donut.cs" />
+    <Compile Include="Donuts\Basic\PlainDonut.cs" />
+    <Compile Include="Donuts\Basic\UnbakedDonuts.cs" />
+    <Compile Include="Donuts\DonutDish.cs" />
+    <Compile Include="Donuts\Extras\CaramelDish.cs" />
+    <Compile Include="Donuts\Extras\Glaze\ChocolateDish.cs" />
+    <Compile Include="Donuts\Extras\Glaze\ChocolateGlaze.cs" />
+    <Compile Include="Donuts\Extras\Glaze\ChocolateGlazeIngredient.cs" />
+    <Compile Include="Donuts\Extras\Creme\CookedSugarWater.cs" />
+    <Compile Include="Donuts\Extras\Creme\Creme.cs" />
+    <Compile Include="Donuts\Extras\Creme\CremeIngredient.cs" />
+    <Compile Include="Donuts\Extras\Glaze\Glaze.cs" />
+    <Compile Include="Donuts\Extras\Glaze\GlazeDish.cs" />
+    <Compile Include="Donuts\Extras\Glaze\GlazeIngredient.cs" />
+    <Compile Include="Donuts\Extras\SprinklesDish.cs" />
+    <Compile Include="Donuts\Extras\Creme\SugarWater.cs" />
+    <Compile Include="Donuts\Extras\Glaze\UncookedChocolateGlaze.cs" />
+    <Compile Include="Donuts\Extras\Glaze\UncookedGlaze.cs" />
+    <Compile Include="Donuts\Extras\Creme\UnmixedCreme.cs" />
+    <Compile Include="Donuts\JellyDish.cs" />
+    <Compile Include="Donuts\Jelly\BakedJelly.cs" />
+    <Compile Include="Donuts\Jelly\BurntJelly.cs" />
+    <Compile Include="Donuts\Jelly\FilledJelly.cs" />
+    <Compile Include="Donuts\Jelly\Jelly.cs" />
+    <Compile Include="Donuts\Jelly\PlainJelly.cs" />
+    <Compile Include="Donuts\Jelly\UnbakedJelly.cs" />
+    <Compile Include="Donuts\LongJohnDish.cs" />
+    <Compile Include="Donuts\LongJohn\BakedLongJohns.cs" />
+    <Compile Include="Donuts\LongJohn\BurntLongJohns.cs" />
+    <Compile Include="Donuts\LongJohn\LongJohn.cs" />
+    <Compile Include="Donuts\LongJohn\PlainLongJohn.cs" />
+    <Compile Include="Donuts\LongJohn\UnbakedLongJohns.cs" />
+    <Compile Include="Donuts\PlatedDonut.cs" />
+    <Compile Include="Donuts\UnmixedDonutDough.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tea\Earl Grey\BigEarlGrey.cs" />
+    <Compile Include="Tea\Earl Grey\EarlGrey.cs" />
+    <Compile Include="Tea\Earl Grey\EarlGreyDish.cs" />
+    <Compile Include="Tea\Earl Grey\EarlGreySteeped.cs" />
+    <Compile Include="Tea\Earl Grey\PlatedBigEarlGrey.cs" />
+    <Compile Include="Tea\Earl Grey\PlatedSmallEarlGrey.cs" />
+    <Compile Include="Tea\Earl Grey\SmallEarlGrey.cs" />
+    <Compile Include="Tea\EarlGreyProvider.cs" />
+    <Compile Include="Tea\Extras\HoneyDish.cs" />
+    <Compile Include="Tea\Extras\LemonDish.cs" />
+    <Compile Include="Tea\ECS\GrantNecessaryKettles.cs" />
+    <Compile Include="Tea\HibiscusProvider.cs" />
+    <Compile Include="Tea\Hibiscus\BigHibiscus.cs" />
+    <Compile Include="Tea\Hibiscus\GroundHibiscus.cs" />
+    <Compile Include="Tea\Hibiscus\Hibiscus.cs" />
+    <Compile Include="Tea\Hibiscus\HibiscusDish.cs" />
+    <Compile Include="Tea\Hibiscus\HibiscusSteeped.cs" />
+    <Compile Include="Tea\Hibiscus\PlatedBigHibiscus.cs" />
+    <Compile Include="Tea\Hibiscus\PlatedSmallHibiscus.cs" />
+    <Compile Include="Tea\Hibiscus\SmallHibiscus.cs" />
+    <Compile Include="Tea\KettleStand.cs" />
+    <Compile Include="Tea\Kettle\Kettle.cs" />
+    <Compile Include="Tea\Kettle\KettleBoiled.cs" />
+    <Compile Include="Tea\Kettle\KettleFilled.cs" />
+    <Compile Include="Tea\Kettle\KettleRaw.cs" />
+    <Compile Include="Tea\Kettle\KettleSteeped.cs" />
+    <Compile Include="Tea\Matcha\BigSage.cs" />
+    <Compile Include="Tea\Matcha\GroundMatcha.cs" />
+    <Compile Include="Tea\Matcha\PlatedBigSage.cs" />
+    <Compile Include="Tea\Matcha\PlatedSmallSage.cs" />
+    <Compile Include="Tea\Matcha\Sage.cs" />
+    <Compile Include="Tea\Matcha\SageDish.cs" />
+    <Compile Include="Tea\Matcha\SageSteeped.cs" />
+    <Compile Include="Tea\Matcha\SmallSage.cs" />
+    <Compile Include="Tea\SageProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IngredientLib\IngredientLib.csproj">
+      <Project>{273E222C-4939-447C-9FCD-3FAE7445A797}</Project>
+      <Name>IngredientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MiniCafe\Mini Cafe.csproj">
+      <Project>{26a122d9-e1ad-443a-89ad-0d2a78ef6f25}</Project>
+      <Name>Mini Cafe</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\Legacy Cafe\content" /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

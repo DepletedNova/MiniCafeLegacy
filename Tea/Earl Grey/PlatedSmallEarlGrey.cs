@@ -35,7 +35,7 @@ namespace MiniCafeLegacy.Mains.Tea
                 },
                 new()
                 {
-                    Item = GetCastedGDO<Item, LemonSlice>(),
+                    Item = GetCastedGDO<Item, ChoppedLemon>(),
                     Text = "L"
                 },
                 new()
@@ -63,7 +63,7 @@ namespace MiniCafeLegacy.Mains.Tea
                 Items = new()
                 {
                     GetCastedGDO<Item, HoneyIngredient>(),
-                    GetCastedGDO<Item, LemonSlice>()
+                    GetCastedGDO<Item, ChoppedLemon>()
                 },
                 RequiresUnlock = true,
                 Min = 0,

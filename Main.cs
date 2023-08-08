@@ -18,7 +18,7 @@ namespace MiniCafeLegacy
     public class Main : BaseMod
     {
         public const string GUID = "nova.legacycafe";
-        public const string VERSION = "1.0.0";
+        public const string VERSION = "1.0.1";
 
         public Main() : base(GUID, "Mini Legacy", "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 

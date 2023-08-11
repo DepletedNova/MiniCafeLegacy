@@ -93,7 +93,7 @@ namespace MiniCafeLegacy.Mains.Tea
             {
                 new()
                 {
-                    Item = GetCastedGDO<Item, LemonSlice>(),
+                    Item = GetCastedGDO<Item, ChoppedLemon>(),
                     GameObject = gameObject.GetChild("Lemon")
                 },
                 new()

@@ -51,32 +51,32 @@ namespace MiniCafeLegacy.Extras
         {
             new()
             {
-                Ingredient = GetCastedGDO<Item, LemonSlice>(),
+                Ingredient = GetCastedGDO<Item, ChoppedLemon>(),
                 MenuItem = GetCastedGDO<ItemGroup, PlatedBigHibiscus>(),
             },
             new()
             {
-                Ingredient = GetCastedGDO<Item, LemonSlice>(),
+                Ingredient = GetCastedGDO<Item, ChoppedLemon>(),
                 MenuItem = GetCastedGDO<ItemGroup, PlatedSmallHibiscus>(),
             },
             new()
             {
-                Ingredient = GetCastedGDO<Item, LemonSlice>(),
+                Ingredient = GetCastedGDO<Item, ChoppedLemon>(),
                 MenuItem = GetCastedGDO<ItemGroup, PlatedBigSage>(),
             },
             new()
             {
-                Ingredient = GetCastedGDO<Item, LemonSlice>(),
+                Ingredient = GetCastedGDO<Item, ChoppedLemon>(),
                 MenuItem = GetCastedGDO<ItemGroup, PlatedSmallSage>(),
             },
             new()
             {
-                Ingredient = GetCastedGDO<Item, LemonSlice>(),
+                Ingredient = GetCastedGDO<Item, ChoppedLemon>(),
                 MenuItem = GetCastedGDO<ItemGroup, PlatedBigEarlGrey>(),
             },
             new()
             {
-                Ingredient = GetCastedGDO<Item, LemonSlice>(),
+                Ingredient = GetCastedGDO<Item, ChoppedLemon>(),
                 MenuItem = GetCastedGDO<ItemGroup, PlatedSmallEarlGrey>(),
             },
         };

@@ -12,13 +12,15 @@ using KitchenData;
 using MiniCafe.Items;
 using KitchenLib.References;
 using MiniCafeLegacy.Mains.Coffee;
+using MiniCafeLegacy.Mains;
+using MiniCafe.Extras;
 
 namespace MiniCafeLegacy
 {
     public class Main : BaseMod
     {
         public const string GUID = "nova.legacycafe";
-        public const string VERSION = "1.0.1";
+        public const string VERSION = "1.0.2";
 
         public Main() : base(GUID, "Mini Legacy", "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 
@@ -31,6 +33,7 @@ namespace MiniCafeLegacy
             Events.BuildGameDataEvent += (s, args) =>
             {
                 UpdateMugs();
+                UpdateDoughnuts();
 
                 args.gamedata.ProcessesView.Initialise(args.gamedata);
             };
@@ -72,6 +75,17 @@ namespace MiniCafeLegacy
                 Duration = 2.75f,
                 Process = GetGDO<Process>(ProcessReferences.FillCoffee),
                 Result = GetCastedGDO<Item, SmallEspresso>()
+            });
+        }
+
+        private void UpdateDoughnuts()
+        {
+            GetCastedGDO<Item, UnmixedDonutDough>().DerivedProcesses.Add(
+            new()
+            {
+                Process = GetGDO<Process>(ProcessReferences.Knead),
+                Duration = 1.3f,
+                Result = GetCastedGDO<Item, UnbakedJelly>()
             });
         }
         #endregion

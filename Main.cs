@@ -20,7 +20,7 @@ namespace MiniCafeLegacy
     public class Main : BaseMod
     {
         public const string GUID = "nova.legacycafe";
-        public const string VERSION = "1.0.2";
+        public const string VERSION = "1.0.5";
 
         public Main() : base(GUID, "Mini Legacy", "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 
@@ -80,8 +80,8 @@ namespace MiniCafeLegacy
 
         private void UpdateDoughnuts()
         {
-            GetCastedGDO<Item, UnmixedDonutDough>().DerivedProcesses.Add(
-            new()
+            var dough = GetCastedGDO<Item, UnmixedDonutDough>();
+            dough.DerivedProcesses.Add(new()
             {
                 Process = GetGDO<Process>(ProcessReferences.Knead),
                 Duration = 1.3f,

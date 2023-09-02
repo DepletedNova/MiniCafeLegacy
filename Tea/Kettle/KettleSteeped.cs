@@ -77,16 +77,8 @@ namespace MiniCafeLegacy.Items
         public override bool PreventExplicitSplit => true;
         public override bool AllowSplitMerging => true;
         public override bool SplitByComponents => true;
-        public override Item SplitByComponentsHolder => GetCastedGDO<Item, KettleBoiled>();
+        public override Item SplitByComponentsHolder => GetCastedGDO<Item, Kettle>();
         public override Item RefuseSplitWith => GetCastedGDO<Item, KettleBoiled>();
-
-        public override List<IItemProperty> Properties => new()
-        {
-            new CComponentSplitDepleted()
-            {
-                DepletionItem = GetCustomGameDataObject<Kettle>().ID
-            }
-        };
 
         public class View : AccessedItemGroupView
         {

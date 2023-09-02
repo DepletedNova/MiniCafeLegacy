@@ -7,8 +7,10 @@ using KitchenLib.Utils;
 using MiniCafe.Items;
 using System.Collections.Generic;
 using UnityEngine;
+using IngredientLib.Ingredient.Items;
 using static KitchenLib.Utils.GDOUtils;
 using static KitchenLib.Utils.MaterialUtils;
+using MiniCafe.Processes;
 
 namespace MiniCafeLegacy.Mains.Coffee
 {
@@ -34,7 +36,8 @@ namespace MiniCafeLegacy.Mains.Coffee
         public override DishType Type => DishType.Main;
         public override HashSet<Process> RequiredProcesses => new()
         {
-            GetGDO<Process>(ProcessReferences.FillCoffee)
+            GetGDO<Process>(ProcessReferences.FillCoffee),
+            GetCastedGDO<Process, BoilWaterProcess>()
         };
         public override Dictionary<Locale, string> Recipe => new()
         {
@@ -43,11 +46,6 @@ namespace MiniCafeLegacy.Mains.Coffee
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
             (Locale.English, LocalisationUtils.CreateUnlockInfo("Americano", "Adds americano as a main dish", "Espresso with a touch of water!"))
-        };
-
-        public override HashSet<Item> MinimumIngredients => new()
-        {
-            GetCastedGDO<Item, BoiledWater>()
         };
 
         public override List<Dish.MenuItem> ResultingMenuItems => new()

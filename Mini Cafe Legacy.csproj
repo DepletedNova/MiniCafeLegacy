@@ -156,7 +156,6 @@
     <Compile Include="Donuts\LongJohn\PlainLongJohn.cs" />
     <Compile Include="Donuts\LongJohn\UnbakedLongJohns.cs" />
     <Compile Include="Donuts\PlatedDonut.cs" />
-    <Compile Include="Donuts\UnmixedDonutDough.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tea\Earl Grey\BigEarlGrey.cs" />

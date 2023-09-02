@@ -36,7 +36,6 @@ namespace MiniCafeLegacy.Items
             }
         };
 
-        public override bool AutoCollapsing => true;
         public override List<ItemGroup.ItemSet> Sets => new()
         {
             new()
@@ -77,7 +76,7 @@ namespace MiniCafeLegacy.Items
                 new()
                 {
                     GameObject = gameObject.GetChild("water"),
-                    Item = GetCastedGDO<Item, KettleFilled>()
+                    Item = GetGDO<Item>(ItemReferences.Water)
                 }
             };
         }

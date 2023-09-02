@@ -8,7 +8,7 @@ using static MiniCafe.Helper;
 
 namespace MiniCafeLegacy.Items
 {
-    internal class KettleBoiled : CustomItem
+    internal class KettleBoiled : CustomItemGroup
     {
         public override int ID => Main.GetHash(UniqueNameID);
         public static int KettleID { get; private set; }
@@ -23,6 +23,7 @@ namespace MiniCafeLegacy.Items
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemStorage ItemStorageFlags => ItemStorage.None;
         public override Item DisposesTo => GetCastedGDO<Item, Kettle>();
+        public override bool ApplyProcessesToComponents => true;
 
         public override List<Item.ItemProcess> Processes => new()
         {

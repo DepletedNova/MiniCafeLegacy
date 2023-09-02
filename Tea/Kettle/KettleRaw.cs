@@ -1,4 +1,5 @@
-﻿using Kitchen;
+﻿using IngredientLib.Ingredient.Items;
+using Kitchen;
 using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.Utils;
@@ -62,11 +63,12 @@ namespace MiniCafeLegacy.Items
             {
                 Items = new()
                 {
-                    GetCastedGDO<Item, KettleBoiled>()
+                    GetCastedGDO<Item, Kettle>(),
+                    GetCastedGDO<Item, BoiledWater>()
                 },
                 IsMandatory = true,
-                Min = 1,
-                Max = 1,
+                Min = 2,
+                Max = 2,
             },
             new()
             {
@@ -79,11 +81,6 @@ namespace MiniCafeLegacy.Items
                 Min = 1,
                 Max = 1
             }
-        };
-
-        public override List<IItemProperty> Properties => new()
-        {
-            new CPreventItemMerge { Condition = MergeCondition.OnlyAsWrapped }
         };
 
         public override void OnRegister(ItemGroup gdo)

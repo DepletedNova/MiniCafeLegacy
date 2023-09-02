@@ -1,4 +1,5 @@
 ﻿using ApplianceLib.Api;
+using IngredientLib.Ingredient.Items;
 using Kitchen;
 using KitchenData;
 using KitchenLib.Customs;
@@ -37,11 +38,11 @@ namespace MiniCafeLegacy.Mains.Tea
                 Items = new()
                 {
                     GetCastedGDO<Item, SmallMug>(),
-                    GetCastedGDO<Item, HibiscusSteeped>()
+                    GetCastedGDO<Item, HibiscusSteeped>(),
+                    GetCastedGDO<Item, BoiledWater>(),
                 },
                 IsMandatory = true,
-                Min = 2,
-                Max = 2,
+                Min = 3, Max = 3,
             }
         };
 
